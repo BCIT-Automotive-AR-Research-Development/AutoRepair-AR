@@ -1,0 +1,1 @@
+Wireframe shader by Chase Pettit https://github.com/Chaser324/unity-wireframe
