@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="27.0" toolVersion="10.13.3">
+<ModelTarget name="HondaFit" targetId="f474337e5c3446e6896da321cf702b2a" version="14.0" toolVersion="10.13.3" bbox="-0.996300 -0.760747 -1.984434 0.996850 0.759781 1.984434" previewImage="f474337e5c3446e6896da321cf702b2a_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="HondaFits_assembly" assemblyId="6feef32fc80c4ffab5dab32d35d61bba">
+<Part name="HondaFit" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="GuideView_0000" translation="-0.00027477 -0.000456425 5.14499" rotation="AD: -0.0289358 -1.01334 6.08831 179.911" image="HondaFit_GuideView_0000.png" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>
