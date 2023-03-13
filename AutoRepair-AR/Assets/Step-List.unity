@@ -253,7 +253,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 028347a771e086641bf2314cd1ef2ba4, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 9f24d0cbca5d0854085d378330904485,
+  sourceAsset: {fileID: 9197481963319205126, guid: dabce259debf1e340bc5b1beb3578fd4,
     type: 3}
   m_SortingOrder: 0
 --- !u!4 &865129812
@@ -280,10 +280,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 865129810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa15e7e9d8aba4489550c92c60b1bd3, type: 3}
+  m_Script: {fileID: 11500000, guid: f602dcdd85f12934ba14f8f9f30b5ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainSceneName: Step-List
+  mainSceneName: TutorialStart
 --- !u!1 &1420701753
 GameObject:
   m_ObjectHideFlags: 0
