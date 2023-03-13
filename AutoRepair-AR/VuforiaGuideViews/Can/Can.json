@@ -1,0 +1,144 @@
+{
+  "project": {
+    "id": "dfcf7531cc0a4e1caa58d6835fa78359",
+    "name": "Can",
+    "source": {
+      "file": "D:/Unity-Projects/COMP-3800-VuforiaTest/COMP-3800-VuforiaTest/Assets/Models/Can.fbx",
+      "date": "1678070426848"
+    },
+    "converted": {
+      "file": ".converted/Can.pvz",
+      "date": "1678070654878"
+    },
+    "shadow": {
+      "file": ".shadow/Can.glb",
+      "date": "1678070655039"
+    },
+    "bubbleGummed": {
+      "file": "",
+      "date": ""
+    },
+    "simplified": {
+      "file": "",
+      "date": ""
+    },
+    "assemblyId": "9fd59478e2944f4399e664084e3ad364",
+    "numDraws": 1,
+    "numPolygons": 23014,
+    "bubbleGummingSkipped": false,
+    "isBubbleGummed": false,
+    "originalNumMaterials": 1,
+    "originalNumTextures": 0,
+    "originalNumDraws": 1,
+    "originalNumPolygons": 23014,
+    "realisticTextureDetection": false
+  },
+  "progress": {
+    "skipGuideViewWizard": false,
+    "upVector": 2,
+    "units": 2,
+    "coloring": 2,
+    "simplification": 2,
+    "optimizeTrackingFor": 2
+  },
+  "camera": {
+    "rotation": [
+      -0.19977408140300623,
+      -0.3791514622279383,
+      -0.08419996387208555,
+      0.8995803750493565
+    ],
+    "translation": [
+      -0.2514404796142518,
+      0.23070168668557764,
+      0.2452976775689638
+    ],
+    "up": [
+      0,
+      1,
+      0
+    ],
+    "target": [
+      0,
+      0,
+      0
+    ]
+  },
+  "views": [
+    {
+      "name": "GuideView_0000",
+      "type": 1,
+      "rating": 5,
+      "guideViewPosition": {
+        "rotation": [
+          -0.19977408140300623,
+          -0.3791514622279383,
+          -0.08419996387208555,
+          0.8995803750493565
+        ],
+        "translation": [
+          -0.2514404796142518,
+          0.23070168668557764,
+          0.2452976775689638
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "target": [
+          -6.02727179006557e-7,
+          0.06659049882541654,
+          6.156928278144847e-7
+        ]
+      },
+      "targetExtent": null,
+      "recognitionRanges": null,
+      "userVolume": null,
+      "images": [
+        {
+          "type": "edge",
+          "file": "GuideView_0000_2.png"
+        },
+        {
+          "type": "shaded",
+          "file": "GuideView_0000_1.png"
+        }
+      ],
+      "device": 1,
+      "targetExtentPreset": null,
+      "recognitionRangesPreset": null
+    }
+  ],
+  "orbitcontrols": {
+    "target": [
+      -6.02727179006557e-7,
+      0.06659049882541654,
+      6.156928278144847e-7
+    ],
+    "worldUpVector": [
+      0,
+      1,
+      0
+    ]
+  },
+  "orbitdetection": {
+    "target": [
+      -6.02727179006557e-7,
+      0.06659049882541654,
+      6.156928278144847e-7
+    ],
+    "worldUpVector": [
+      0,
+      1,
+      0
+    ]
+  },
+  "simplification": {
+    "progress": "0%"
+  },
+  "uniformScale": 0.01,
+  "optimizeTrackingFor": "default",
+  "realisticAppearance": "false",
+  "version": 7
+}

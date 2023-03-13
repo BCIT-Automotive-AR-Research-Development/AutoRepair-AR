@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="HondaFit" motionHint="adaptive" trackingMode="car" optimizeTrackingFor="default"/>
+
+</Tracking>
+
+<Assembly name="HondaFits_assembly" assemblyId="6feef32fc80c4ffab5dab32d35d61bba">
+<Part name="HondaFit" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="GuideView_0000" translation="-0.00027477 -0.000456425 5.14499" rotation="AD: -0.0289358 -1.01334 6.08831 179.911" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>

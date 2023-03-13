@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="27.0" toolVersion="10.13.3">
+<ModelTarget name="Can" targetId="dfcf7531cc0a4e1caa58d6835fa78359" version="14.0" toolVersion="10.13.3" bbox="-0.034636 0.000077 -0.034636 0.034637 0.133104 0.034637" previewImage="dfcf7531cc0a4e1caa58d6835fa78359_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="Cans_assembly" assemblyId="9fd59478e2944f4399e664084e3ad364">
+<Part name="Can" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="GuideView_0000" translation="-1.11759e-08 0.0603307 0.415905" rotation="AD: 0.999371 -0.0935403 0.421211 203.048" image="Can_GuideView_0000.png" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>
