@@ -1,5 +1,5 @@
 {
-  "dependencies": {
+    "dependencies": {
     "com.ptc.vuforia.engine": "file:com.ptc.vuforia.engine-10.13.3.tgz",
     "com.unity.collab-proxy": "1.17.7",
     "com.unity.feature.ar": "1.0.0",
