@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+<Tracking>
+<ModelTarget name="Mitsubishi_Sprint4" motionHint="adaptive" trackingMode="car" optimizeTrackingFor="default"/>
+
+</Tracking>
+
+<Assembly name="Mitsubishi_Sprint4s_assembly" assemblyId="96b99248961149b394a04380f807a989">
+<Part name="Mitsubishi_Sprint4" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="GuideView_0000" translation="0.0427327 0.0490407 2.87968" rotation="AD: 0.999985 -0.00770805 0.985288 180.639" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARConfig>
