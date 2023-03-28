@@ -36,6 +36,9 @@ Transform:
   - {fileID: 5241123857318810308}
   - {fileID: 1591066046545894760}
   - {fileID: 3751352853487348303}
+  - {fileID: 7213828683299471904}
+  - {fileID: 5301914063853246258}
+  - {fileID: 4571238324708801718}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -72,16 +75,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instructions:
-  - Desc: 
+  - Name: Remove Armrest Screw Cover
+    Desc: Using a metal pick tool, remove screw cover on the door handle and then
+      remove the screw
     clip: {fileID: 7400000, guid: 58c748e133eb1b14889a0b6af4d1d60a, type: 2}
-  - Desc: 
+  - Name: Remove Door Handle Screw Cover
+    Desc: Using a metal pick tool, remove screw cover on the door handle and then
+      remove the screw
     clip: {fileID: 7400000, guid: d52ef88eb08e8bc48b6926163ae9d62e, type: 2}
-  - Desc: 
+  - Name: Remove Tweeter Speaker
+    Desc: Using a plastic tool, pry the tweeter speaker starting from the hinge side,
+      then remove the speaker connector cable.
+    clip: {fileID: 0}
+  - Name: Unclip Door Trim
+    Desc: Using a plastic tool, pry the whole door interior panel starting from the
+      bottom. Once all clips are loose, lift off the door panel. Be careful as there
+      are connectors still attached to the interior component)
+    clip: {fileID: 0}
+  - Name: Disconnect Trim Connectors
+    Desc: Disconnect the power window and side window connectors and the cable for
+      the door locking/release mechanism. (2 connectors + 2 wire cables)
+    clip: {fileID: 0}
+  - Name: Remove Door Trim
+    Desc: 
     clip: {fileID: 7400000, guid: dd63f77499d0ff7438ee927936c47017, type: 2}
-  - Desc: 
-    clip: {fileID: 7400000, guid: d999fb794107c994aba45da73eca03fd, type: 2}
-  - Desc: 
+  - Name: Remove Metal Bracket
+    Desc: 'Remove the metal bracket that was holding the door handle screw in Step
+      1 by removing 2 screws(+). '
     clip: {fileID: 7400000, guid: d1db68a663b61d64fa9a562ad190a6d0, type: 2}
+  - Name: Remove Vapour Barrier
+    Desc: 'Remove the vapour barrier carefully without ripping the filament and avoiding
+      getting the bentyl adhesive on self. Feed the 2 cables and 2 connectors in
+      Step 5 through the barrier before removing. '
+    clip: {fileID: 7400000, guid: d1db68a663b61d64fa9a562ad190a6d0, type: 2}
+  - Name: Remove Black Metal Cover
+    Desc: Remove black metal cover to access the window regulator. 4 Screws
+    clip: {fileID: 7400000, guid: d999fb794107c994aba45da73eca03fd, type: 2}
+  - Name: Remove Main Speaker
+    Desc: 'Remove the main speaker by twisting counter clockwise then remove speaker
+      connector before fully removing it from the car. '
+    clip: {fileID: 0}
+  - Name: Remove Window Bolts
+    Desc: Using a 10mm shallow socket wrench, remove 2 bolts holding the window glass
+      on to the regulator.
+    clip: {fileID: 0}
+  - Name: Remove Window
+    Desc: Remove the window glass by carefully lifting the glass through the window
+      slit, towards the exterior of the car.
+    clip: {fileID: 0}
+  - Name: Remove Black Cover
+    Desc: Remove the upper black plastic cover to access the window regulator power
+      connector. Use a flat-blade screwdriver to press down the topside notch to
+      release the cover.
+    clip: {fileID: 7400000, guid: d1db68a663b61d64fa9a562ad190a6d0, type: 2}
+  - Name: Disconnect Regulator Connector
+    Desc: Remove the power connector for the window regulator.
+    clip: {fileID: 0}
+  - Name: Remove Window Regulator
+    Desc: Using a 10 mm shallow socket, remove 6 bolts holding the window regulator.
+    clip: {fileID: 0}
   stepCounter: 0
 --- !u!1001 &965526097248235648
 PrefabInstance:
@@ -513,6 +565,156 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3712587829889437092}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4105862789645867869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4593447896394505336}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.097
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.351
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.119
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.047450934
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.82329917
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5632335
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.051913485
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 7.852
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 181.853
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 111.374
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_Name
+      value: Speaker_Tweeter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7653ced1fbd9c1e45bdb69901eae1cf7, type: 3}
+--- !u!4 &4571238324708801718 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4105862789645867869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5629103424061812953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4593447896394505336}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0404
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2833
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.192
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_Name
+      value: Speaker_Main
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 176b9de161b80b74ab8bb13aa76ae872, type: 3}
+--- !u!4 &5301914063853246258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 176b9de161b80b74ab8bb13aa76ae872,
+    type: 3}
+  m_PrefabInstance: {fileID: 5629103424061812953}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5707906929602164015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -579,22 +781,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e563d2611df3e984e92203420188c3ee, type: 2}
+      objectReference: {fileID: 2100000, guid: 6833a623d1b4df54abdfe933a1483a27, type: 2}
     - target: {fileID: -7511558181221131132, guid: 3a45d3bed61cf88499abdbd8f988d0e0,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: e563d2611df3e984e92203420188c3ee, type: 2}
+      objectReference: {fileID: 2100000, guid: 6833a623d1b4df54abdfe933a1483a27, type: 2}
     - target: {fileID: -7511558181221131132, guid: 3a45d3bed61cf88499abdbd8f988d0e0,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: e563d2611df3e984e92203420188c3ee, type: 2}
+      objectReference: {fileID: 2100000, guid: 6833a623d1b4df54abdfe933a1483a27, type: 2}
     - target: {fileID: -7511558181221131132, guid: 3a45d3bed61cf88499abdbd8f988d0e0,
         type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: e563d2611df3e984e92203420188c3ee, type: 2}
+      objectReference: {fileID: 2100000, guid: 6833a623d1b4df54abdfe933a1483a27, type: 2}
     - target: {fileID: -7511558181221131132, guid: 3a45d3bed61cf88499abdbd8f988d0e0,
         type: 3}
       propertyPath: m_Materials.Array.data[4]
@@ -622,4 +824,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3a45d3bed61cf88499abdbd8f988d0e0,
     type: 3}
   m_PrefabInstance: {fileID: 5707906929602164015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7175944543784379851
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4593447896394505336}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0157
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0306
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.2476
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.50000006
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.49999997
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 919132149155446097, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_Name
+      value: Metal_Bracket
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e3280bcf8b0223848a6858dcfb9d2a6b, type: 3}
+--- !u!4 &7213828683299471904 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7175944543784379851}
   m_PrefabAsset: {fileID: 0}
