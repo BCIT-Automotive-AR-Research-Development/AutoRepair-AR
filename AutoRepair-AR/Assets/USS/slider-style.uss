@@ -1,0 +1,7 @@
+.unity-slider__track {
+    background-color: #808080;
+}
+
+.unity-slider__thumb {
+    background-color: #FF8080;
+}

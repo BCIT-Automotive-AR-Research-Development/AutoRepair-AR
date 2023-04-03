@@ -17,8 +17,8 @@ public class UIElementToggler : MonoBehaviour
 
         leftBtn = root.Q<VisualElement>("LeftBtn");
         rightBtn = root.Q<VisualElement>("RightBtn");
-        info = root.Q<VisualElement>("Info");
-        infoText = root.Q<VisualElement>("InfoText");
+        info = root.Q<VisualElement>("InfoText");
+        infoText = root.Q<VisualElement>("AllSteps");
 
         // Hide the info text and disable the step down button on start
         infoText.style.display = DisplayStyle.None;
