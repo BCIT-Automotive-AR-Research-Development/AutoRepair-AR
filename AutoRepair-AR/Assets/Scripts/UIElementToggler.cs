@@ -13,47 +13,47 @@ public class UIElementToggler : MonoBehaviour
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
 
         Button stepUpBtn = root.Q<Button>("StepUpBtn");
-        Button stepDownBtn = root.Q<Button>("StepDownBtn");
+        //Button stepDownBtn = root.Q<Button>("StepDownBtn");
 
         leftBtn = root.Q<VisualElement>("LeftBtn");
         rightBtn = root.Q<VisualElement>("RightBtn");
         info = root.Q<VisualElement>("InfoText");
-        infoText = root.Q<VisualElement>("AllSteps");
+        //info = root.Q<VisualElement>("AllSteps");
 
         // Hide the info text and disable the step down button on start
-        infoText.style.display = DisplayStyle.None;
-        stepDownBtn.SetEnabled(false);
+        //infoText.style.display = DisplayStyle.None;
+        //stepDownBtn.SetEnabled(false);
 
         stepUpBtn.clickable.clicked += () =>
         {
             // Hide the left button, right button, and info element
-            leftBtn.style.display = DisplayStyle.None;
-            rightBtn.style.display = DisplayStyle.None;
-            info.style.display = DisplayStyle.None;
-            stepDownBtn.style.display = DisplayStyle.Flex;
+            leftBtn.visible = !leftBtn.visible;
+            rightBtn.visible = !rightBtn.visible;
+            info.visible = !info.visible;
+            //stepDownBtn.style.display = DisplayStyle.Flex;
 
             // Show the info text element
-            infoText.style.display = DisplayStyle.Flex;
-            stepUpBtn.style.display = DisplayStyle.None;
+            //infoText.style.display = DisplayStyle.Flex;
+            stepUpBtn.transform.rotation *= Quaternion.Euler(0, 0, 180);
 
             // Enable the step down button
-            stepDownBtn.SetEnabled(true);
+            //stepDownBtn.SetEnabled(true);
         };
 
-        stepDownBtn.clickable.clicked += () =>
-        {
-            // Show the left button, right button, and info element
-            leftBtn.style.display = DisplayStyle.Flex;
-            rightBtn.style.display = DisplayStyle.Flex;
-            info.style.display = DisplayStyle.Flex;
-            stepUpBtn.style.display = DisplayStyle.Flex;
+        // stepDownBtn.clickable.clicked += () =>
+        // {
+        //     // Show the left button, right button, and info element
+        //     leftBtn.style.display = DisplayStyle.Flex;
+        //     rightBtn.style.display = DisplayStyle.Flex;
+        //     info.style.display = DisplayStyle.Flex;
+        //     stepUpBtn.style.display = DisplayStyle.Flex;
 
-            // Hide the info text element
-            infoText.style.display = DisplayStyle.None;
-            stepDownBtn.style.display = DisplayStyle.None;
+        //     // Hide the info text element
+        //     //infoText.style.display = DisplayStyle.None;
+        //     stepDownBtn.style.display = DisplayStyle.None;
 
-            // Disable the step down button
-            stepDownBtn.SetEnabled(false);
-        };
+        //     // Disable the step down button
+        //     stepDownBtn.SetEnabled(false);
+        // };
     }
 }
