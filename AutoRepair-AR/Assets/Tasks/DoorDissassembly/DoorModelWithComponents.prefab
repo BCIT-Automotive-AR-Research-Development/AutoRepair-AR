@@ -212,6 +212,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bolt_10mm
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f468685d2b303c3439cd3f08fc217412,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f468685d2b303c3439cd3f08fc217412, type: 3}
 --- !u!4 &868372132340933006 stripped
@@ -286,6 +291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScrewCoverArmrest
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8170d3f47e1c5654681cea2e1e99dd2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8170d3f47e1c5654681cea2e1e99dd2d, type: 3}
@@ -366,6 +376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Connector_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a04438cb4f7d424c8dc07f2a281c251,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a04438cb4f7d424c8dc07f2a281c251, type: 3}
@@ -460,7 +475,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ce9aa94dac8bec148b5dcb6aa5d3d3a0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce9aa94dac8bec148b5dcb6aa5d3d3a0, type: 3}
@@ -537,6 +552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vapour_Barrier
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f3f864e38bf2e5841afb961d18577b63,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3f864e38bf2e5841afb961d18577b63, type: 3}
 --- !u!4 &1439956223480033719 stripped
@@ -607,10 +627,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: d38a6e80f665f73489395c2137c07645,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4714817154256824709, guid: d38a6e80f665f73489395c2137c07645,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d38a6e80f665f73489395c2137c07645,
         type: 3}
       propertyPath: m_Name
       value: BlackCover
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d38a6e80f665f73489395c2137c07645,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821623529969584324, guid: d38a6e80f665f73489395c2137c07645,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d38a6e80f665f73489395c2137c07645, type: 3}
@@ -682,10 +722,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: 28a3df316bf04834c963e44b2203fa46,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 28a3df316bf04834c963e44b2203fa46,
         type: 3}
       propertyPath: m_Name
       value: ScrewCoverDoorHandle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 28a3df316bf04834c963e44b2203fa46,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8821623529969584324, guid: 28a3df316bf04834c963e44b2203fa46,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28a3df316bf04834c963e44b2203fa46, type: 3}
@@ -761,6 +816,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Screw_Phillips
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a967b7fd394bdd4e97bd476e69b3cf1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a967b7fd394bdd4e97bd476e69b3cf1, type: 3}
@@ -937,6 +997,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cable_Latch
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d185059e64c154d458d309d5c1d39555,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d185059e64c154d458d309d5c1d39555, type: 3}
 --- !u!4 &3113899477433065253 stripped
@@ -1022,6 +1087,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7473206145432438680, guid: ae3cef1542bb9f64c9eecdadd4f7a98d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1492702650489894738, guid: ae3cef1542bb9f64c9eecdadd4f7a98d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1031,6 +1101,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MetalCover
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ae3cef1542bb9f64c9eecdadd4f7a98d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3942844865621104101, guid: ae3cef1542bb9f64c9eecdadd4f7a98d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5724966010165941550, guid: ae3cef1542bb9f64c9eecdadd4f7a98d,
         type: 3}
@@ -1122,6 +1202,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speaker_Tweeter
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7653ced1fbd9c1e45bdb69901eae1cf7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7653ced1fbd9c1e45bdb69901eae1cf7, type: 3}
 --- !u!4 &4571238324708801718 stripped
@@ -1197,6 +1282,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Connector_White
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5f144554720a7f948a1156621bfb8aba,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f144554720a7f948a1156621bfb8aba, type: 3}
 --- !u!4 &5043482578909021690 stripped
@@ -1271,6 +1361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Speaker_Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 176b9de161b80b74ab8bb13aa76ae872,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 176b9de161b80b74ab8bb13aa76ae872, type: 3}
@@ -1457,6 +1552,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nut
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3d04c00c47152d3479acbe2973dbd50f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d04c00c47152d3479acbe2973dbd50f, type: 3}
 --- !u!4 &5852386240074543064 stripped
@@ -1531,6 +1631,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Speaker_Tweeter_Connector
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1ecf251934ef7844aac7d911f838a525,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ecf251934ef7844aac7d911f838a525, type: 3}
@@ -1612,6 +1717,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Metal_Bracket
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e3280bcf8b0223848a6858dcfb9d2a6b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3280bcf8b0223848a6858dcfb9d2a6b, type: 3}
 --- !u!4 &7213828683299471904 stripped
@@ -1687,6 +1797,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Speaker_Main_Connector
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fd5f3fa10a9f1334cbf150c1468df2e6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd5f3fa10a9f1334cbf150c1468df2e6, type: 3}
 --- !u!4 &7961069953814388602 stripped
@@ -1761,6 +1876,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Window_Glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4d6093f0add3b724798025da33eeaa44,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d6093f0add3b724798025da33eeaa44, type: 3}

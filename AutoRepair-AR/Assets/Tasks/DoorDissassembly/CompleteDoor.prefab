@@ -1,0 +1,413 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6897793727448141186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7713671367428655637}
+  m_Layer: 0
+  m_Name: CompleteDoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7713671367428655637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897793727448141186}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3795720747835063755}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3686093583677692448
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7713671367428655637}
+    m_Modifications:
+    - target: {fileID: -9125661885996174619, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.518
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8478859230491475230, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8368927588141617672, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7590513832486464909, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.705245
+      objectReference: {fileID: 0}
+    - target: {fileID: -7590513832486464909, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7761624
+      objectReference: {fileID: 0}
+    - target: {fileID: -7463743810886221401, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1767555
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.167333
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.16785835
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0014579772
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0002268982
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6924572
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.14775948
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6904417
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.1481908
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -89.833
+      objectReference: {fileID: 0}
+    - target: {fileID: -5857849977888116231, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 24.159
+      objectReference: {fileID: 0}
+    - target: {fileID: 588775095091413814, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.72936004
+      objectReference: {fileID: 0}
+    - target: {fileID: 588775095091413814, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.8789117
+      objectReference: {fileID: 0}
+    - target: {fileID: 588775095091413814, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.3320357
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_Name
+      value: Complete
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331766290970544871, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00017855226
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331766290970544871, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0010342088
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331766290970544871, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0003158126
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727875972649160919, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7591357
+      objectReference: {fileID: 0}
+    - target: {fileID: 5727875972649160919, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2308827
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.07039023
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03580273
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.1136135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0027103615
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01642273
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0019252788
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.46738002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.46900126
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4576177
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5934474
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5987090696220536216, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6512433151446400280, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 596dc0a2e187d7b49a5f80f45faa01fc, type: 3}
+--- !u!4 &3795720747835063755 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3686093583677692448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4604591163091560305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 596dc0a2e187d7b49a5f80f45faa01fc,
+    type: 3}
+  m_PrefabInstance: {fileID: 3686093583677692448}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7732201123941102963
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604591163091560305}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b43b319051309f44f8bdd6964b4fa38a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7349838214021699272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604591163091560305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4470aa8f1eb9f479b72491654c61cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  instructions:
+  - Name: Remove Armrest Screw Cover
+    Desc: Using a metal pick tool, remove screw cover on the door handle and then
+      remove the screw
+    clip: {fileID: 7400000, guid: 58c748e133eb1b14889a0b6af4d1d60a, type: 2}
+  - Name: Remove Door Handle Screw Cover
+    Desc: Using a metal pick tool, remove screw cover on the door handle and then
+      remove the screw
+    clip: {fileID: 7400000, guid: d52ef88eb08e8bc48b6926163ae9d62e, type: 2}
+  - Name: Remove Tweeter Speaker
+    Desc: Using a plastic tool, pry the tweeter speaker starting from the hinge side,
+      then remove the speaker connector cable.
+    clip: {fileID: 0}
+  - Name: Unclip Door Trim
+    Desc: Using a plastic tool, pry the whole door interior panel starting from the
+      bottom. Once all clips are loose, lift off the door panel. Be careful as there
+      are connectors still attached to the interior component)
+    clip: {fileID: 0}
+  - Name: Disconnect Trim Connectors
+    Desc: Disconnect the power window and side window connectors and the cable for
+      the door locking/release mechanism. (2 connectors + 2 wire cables)
+    clip: {fileID: 0}
+  - Name: Remove Door Trim
+    Desc: 
+    clip: {fileID: 7400000, guid: dd63f77499d0ff7438ee927936c47017, type: 2}
+  - Name: Remove Metal Bracket
+    Desc: 'Remove the metal bracket that was holding the door handle screw in Step
+      1 by removing 2 screws(+). '
+    clip: {fileID: 7400000, guid: d1db68a663b61d64fa9a562ad190a6d0, type: 2}
+  - Name: Remove Vapour Barrier
+    Desc: 'Remove the vapour barrier carefully without ripping the filament and avoiding
+      getting the bentyl adhesive on self. Feed the 2 cables and 2 connectors in
+      Step 5 through the barrier before removing. '
+    clip: {fileID: 7400000, guid: d1db68a663b61d64fa9a562ad190a6d0, type: 2}
+  - Name: Remove Black Metal Cover
+    Desc: Remove black metal cover to access the window regulator. 4 Screws
+    clip: {fileID: 7400000, guid: d999fb794107c994aba45da73eca03fd, type: 2}
+  - Name: Remove Main Speaker
+    Desc: 'Remove the main speaker by twisting counter clockwise then remove speaker
+      connector before fully removing it from the car. '
+    clip: {fileID: 0}
+  - Name: Remove Window Bolts
+    Desc: Using a 10mm shallow socket wrench, remove 2 bolts holding the window glass
+      on to the regulator.
+    clip: {fileID: 0}
+  - Name: Remove Window
+    Desc: Remove the window glass by carefully lifting the glass through the window
+      slit, towards the exterior of the car.
+    clip: {fileID: 0}
+  - Name: Remove Black Cover
+    Desc: Remove the upper black plastic cover to access the window regulator power
+      connector. Use a flat-blade screwdriver to press down the topside notch to
+      release the cover.
+    clip: {fileID: 7400000, guid: d1db68a663b61d64fa9a562ad190a6d0, type: 2}
+  - Name: Disconnect Regulator Connector
+    Desc: Remove the power connector for the window regulator.
+    clip: {fileID: 0}
+  - Name: Remove Window Regulator
+    Desc: Using a 10 mm shallow socket, remove 6 bolts holding the window regulator.
+    clip: {fileID: 0}
+  stepCounter: 0
