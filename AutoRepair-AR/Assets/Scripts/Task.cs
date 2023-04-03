@@ -17,30 +17,30 @@ public class Task : MonoBehaviour
         //animator.clip = instructions[stepCounter].clip;
         animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverrideController;
-        animatorOverrideController["Step 1"] = instructions[stepCounter].clip;
-        animator.Play("Step", -1, 0);
+        //animatorOverrideController["Initial"] = instructions[stepCounter].clip;
+        animator.Play("Initial", -1, 0);
     }
 
     public void NextStep()
     {
-        if (stepCounter + 1 < instructions.Count)
+        if (stepCounter < instructions.Count)
         {
             stepCounter++;
             //animator.clip = instructions[stepCounter].clip;
-            animatorOverrideController["Step 1"] = instructions[stepCounter].clip;
-            animator.Play("Step", -1, 0);
+            animatorOverrideController["Initial"] = instructions[stepCounter - 1].clip;
+            animator.Play("Initial", -1, 0);
         }
     }
 
     public void PreviousStep()
     {
-        if (stepCounter - 1 >= 0)
+        if (stepCounter > 0)
         {
             stepCounter--;
             //animator.clip = instructions[stepCounter].clip;
             //animator.Play();
-            animatorOverrideController["Step 1"] = instructions[stepCounter].clip;
-            animator.Play("Step", -1, 0);
+            animatorOverrideController["Initial"] = instructions[stepCounter - 1].clip;
+            animator.Play("Initial", -1, 0);
         }
     }
 
