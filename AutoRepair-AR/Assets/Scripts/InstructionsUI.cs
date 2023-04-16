@@ -59,7 +59,9 @@ public class InstructionsUI : MonoBehaviour
         });
         
         var sliderStyleSheet = Resources.Load<StyleSheet>("Assets/USS/slider-style.uss");
-        slider.styleSheets.Add(sliderStyleSheet);
+        if (sliderStyleSheet != null){
+            slider.styleSheets.Add(sliderStyleSheet);
+        }
 
         // Create container for slider and step label
         VisualElement sliderContainer = new VisualElement();
