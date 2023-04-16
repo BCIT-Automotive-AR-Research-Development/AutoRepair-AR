@@ -135,9 +135,7 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 1.0
-  preloadedAssets:
-  - {fileID: 11400000, guid: 1eb95d77acb39444e8cf44313496a874, type: 2}
-  - {fileID: -1023994188596982187, guid: 6bb381a8ba31f114d9724357633b4625, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -251,8 +249,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/flare/user.keystore
-  AndroidKeyaliasName: app
+  AndroidKeystoreName: '{inproject}: user.keystore'
+  AndroidKeyaliasName: devdemo
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -663,7 +661,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: com.unity.template.ar
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -671,7 +669,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: com.unity.template.ar
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: COMP-3800-VuforiaTest2
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
