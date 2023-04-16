@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.XR.ARKit;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
@@ -59,7 +58,7 @@ public class InstructionsUI : MonoBehaviour
             //task.GoToStep(stepCounter);
         });
         
-        var sliderStyleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/USS/slider-style.uss");
+        var sliderStyleSheet = Resources.Load<StyleSheet>("Assets/USS/slider-style.uss");
         slider.styleSheets.Add(sliderStyleSheet);
 
         // Create container for slider and step label
