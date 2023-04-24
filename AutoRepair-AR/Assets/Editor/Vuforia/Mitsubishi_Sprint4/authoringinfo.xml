@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo>
+<TargetSet version="27.0" toolVersion="10.13.3">
+<ModelTarget name="Mitsubishi_Sprint4" targetId="1a6200452edb4ce3a77aa3b9291e6a5b" version="14.0" toolVersion="10.13.3" bbox="-0.256797 -0.507494 -0.617045 0.176480 0.604311 0.530381" previewImage="1a6200452edb4ce3a77aa3b9291e6a5b_preview.jpg"/>
+
+</TargetSet>
+
+<Assembly name="Mitsubishi_Sprint4s_assembly" assemblyId="96b99248961149b394a04380f807a989">
+<Part name="Mitsubishi_Sprint4" translation="0 0 0" rotation="AD: 0 0 1 0"/>
+<EntryPoint name="GuideView_0000" translation="0.0427327 0.0490407 2.87968" rotation="AD: 0.999985 -0.00770805 0.985288 180.639" image="Mitsubishi_Sprint4_GuideView_0000.png" trained="no">
+
+</EntryPoint>
+
+</Assembly>
+
+</QCARInfo>
