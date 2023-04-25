@@ -9,13 +9,13 @@ public class InstructionsUI : MonoBehaviour
 
     public Button next, back;
     private int stepCounter = 0;
-    Task task;
+    TaskController task;
 
     // Start is called before the first frame update
     void OnEnable()
     {
         // Get Task
-        task = GameObject.FindGameObjectWithTag("Task").GetComponent<Task>();
+        task = GameObject.FindGameObjectWithTag("Task").GetComponent<TaskController>();
         // Get Buttons
         getButtons();
 
