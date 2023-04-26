@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5235610797605596214}
   - component: {fileID: -2792675586866290640}
   m_Layer: 0
-  m_Name: TaskListController
+  m_Name: TaskSelectorController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f4b466f77e6e043a8edf738f5dd32e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  listEntryTemplate: {fileID: 9197481963319205126, guid: 58398d883f9f19848a173e48a0173902,
+    type: 3}
   list: {fileID: 11400000, guid: 745e5f6fd5497534cb119a52d3574401, type: 2}

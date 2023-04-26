@@ -6,7 +6,7 @@ using UnityEngine;
 public class TaskList : ScriptableObject
 {
     [System.Serializable]
-    public struct Task
+    public class Task
     {
         public string name;
         public string description;
