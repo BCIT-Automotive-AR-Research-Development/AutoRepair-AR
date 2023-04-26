@@ -1926,6 +1926,7 @@ MonoBehaviour:
     Desc: Using a 10 mm shallow socket, remove 6 bolts holding the window regulator.
     clip: {fileID: 0}
   stepCounter: 0
+  model: {fileID: 7898147811536977988}
 --- !u!1 &8175454337686424961
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Task : MonoBehaviour
+public class TaskController : MonoBehaviour
 {
     public List<Step> instructions = new List<Step>();
     public int stepCounter = 0;
-
+    
     protected Animator animator;
     protected AnimatorOverrideController animatorOverrideController;
 

@@ -9,7 +9,7 @@ public class InstructionsUI : MonoBehaviour
 
     public Button next, back;
     private int stepCounter = 0, instructionsLength;
-    Task task;
+    TaskController task;
     private string instructionLengthString;
     private SliderInt slider;
     private Label label, stepLabel;
@@ -89,7 +89,7 @@ public class InstructionsUI : MonoBehaviour
     void OnEnable()
     {
         // Get Task
-        task = GameObject.FindGameObjectWithTag("Task").GetComponent<Task>();
+        task = GameObject.FindGameObjectWithTag("Task").GetComponent<TaskController>();
         // Get Instructions
         instructions = task.GetStepDescriptions();
         int instructionsLength = instructions.Length - 1;
