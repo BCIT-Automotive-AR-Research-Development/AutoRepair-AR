@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 225759618}
   - component: {fileID: 225759617}
-  - component: {fileID: 225759616}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -141,19 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &225759616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225759615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa15e7e9d8aba4489550c92c60b1bd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainSceneName: Step-List
 --- !u!114 &225759617
 MonoBehaviour:
   m_ObjectHideFlags: 0
