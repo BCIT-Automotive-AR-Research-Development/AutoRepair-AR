@@ -13,7 +13,7 @@ public class InstructionsUI : MonoBehaviour
     private string instructionLengthString;
     private SliderInt slider;
     private Label label, stepLabel;
-    
+
     public VisualElement info, sliderHere;
 
     string[] instructions;
@@ -35,7 +35,8 @@ public class InstructionsUI : MonoBehaviour
     // "Using a 10 mm shallow socket, remove 6 bolts holding the window regulator."
     // };
 
-    private void CreateLabel(){
+    private void CreateLabel()
+    {
         // Create a new Label
         label = new Label();
         label.style.color = Color.white;
@@ -49,7 +50,8 @@ public class InstructionsUI : MonoBehaviour
         info.Add(label);
     }
 
-    private void CreateSlider(){
+    private void CreateSlider()
+    {
         slider = new SliderInt(0, instructions.Length, SliderDirection.Horizontal, 1);
         slider.style.height = Screen.height * 0.1f;
         slider.style.width = Screen.width * 0.7f;
@@ -60,9 +62,10 @@ public class InstructionsUI : MonoBehaviour
             stepLabel.text = stepCounter.ToString() + "/" + instructionLengthString;
             task.GoToStep(stepCounter);
         });
-        
+
         var sliderStyleSheet = Resources.Load<StyleSheet>("Assets/USS/slider-style.uss");
-        if (sliderStyleSheet != null){
+        if (sliderStyleSheet != null)
+        {
             slider.styleSheets.Add(sliderStyleSheet);
         }
 
@@ -102,10 +105,11 @@ public class InstructionsUI : MonoBehaviour
         CreateSlider();
 
         next.clicked += () => {
-        // Increase the step counter
-        stepCounter++;
             // Check if the step counter is still within the range of instructions
-            if (stepCounter < instructions.Length) {
+            if (stepCounter < instructions.Length)
+            {
+                // Increase the step counter
+                stepCounter++;
                 // // Update the instructions UI element with the text for the next step
                 // info.text = instructions[stepCounter];
 
@@ -118,17 +122,18 @@ public class InstructionsUI : MonoBehaviour
 
                 // Update the SliderInt value to the new step counter
                 slider.value = stepCounter;
-                        
+
                 // Move to the next step in the task
                 task.NextStep();
             }
         };
 
         back.clicked += () => {
-            // Decrease the step counter
-            stepCounter--;
             // Check if the step counter is still within the range of instructions
-            if (stepCounter >= 0) {
+            if (stepCounter > 0)
+            {
+                // Decrease the step counter
+                stepCounter--;
                 // // Update the instructions UI element with the text for the previous step
                 // info.text = instructions[stepCounter];
 
@@ -138,7 +143,7 @@ public class InstructionsUI : MonoBehaviour
                 label.text = instructions[stepCounter];
 
                 stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
-                
+
                 // Update the SliderInt value to the new step counter
                 slider.value = stepCounter;
 
