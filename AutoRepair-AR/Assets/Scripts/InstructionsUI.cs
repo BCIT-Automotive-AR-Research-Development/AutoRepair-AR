@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
+using System;
 
-public class InstructionsUI : MonoBehaviour
+public class InstructionsUI
 {
+    public Action HideMenu { get; internal set; }
 
+    VisualElement root;
     public Button next, back;
     private int stepCounter = 0, instructionsLength;
     TaskController task;
@@ -17,6 +20,7 @@ public class InstructionsUI : MonoBehaviour
     public VisualElement info, sliderHere;
 
     string[] instructions;
+
     //  = new string[]{
     // "Using a metal pick tool, remove screw cover on the door handle then remove the screw (+)",
     // "Using a metal pick tool, remove screw cover on the door latch handle then remove the screw (+)",
@@ -40,7 +44,7 @@ public class InstructionsUI : MonoBehaviour
         // Create a new Label
         label = new Label();
         label.style.color = Color.white;
-        label.style.fontSize = Screen.height * 0.015f;
+        label.style.fontSize = Screen.height * 0.15f;
         label.style.whiteSpace = WhiteSpace.Normal;
         label.style.unityTextAlign = TextAnchor.MiddleCenter;
 
@@ -88,21 +92,12 @@ public class InstructionsUI : MonoBehaviour
         sliderHere.Add(sliderContainer);
     }
 
-    // Start is called before the first frame update
-    void OnEnable()
+    public InstructionsUI(VisualElement root)
     {
-        // Get Task
-        task = GameObject.FindGameObjectWithTag("Task").GetComponent<TaskController>();
-        // Get Instructions
-        instructions = task.GetStepDescriptions();
-        int instructionsLength = instructions.Length - 1;
-        instructionLengthString = instructionsLength.ToString();
+        this.root = root;
+
         // Get Buttons
         getButtons();
-
-        CreateLabel();
-
-        CreateSlider();
 
         next.clicked += () => {
             // Check if the step counter is still within the range of instructions
@@ -116,7 +111,7 @@ public class InstructionsUI : MonoBehaviour
                 // // Update the TextField text for the next step
                 // textField.SetValueWithoutNotify(instructions[stepCounter]);
 
-                label.text = instructions[stepCounter];
+                label.text = instructions[stepCounter - 1];
 
                 stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
 
@@ -151,7 +146,21 @@ public class InstructionsUI : MonoBehaviour
                 task.PreviousStep();
             }
         };
+    }
 
+    // Start is called before the first frame update
+    public void SetTask(TaskController task)
+    {
+        // Get Task
+        this.task = task;
+        // Get Instructions
+        instructions = task.GetStepDescriptions();
+        int instructionsLength = instructions.Length - 1;
+        instructionLengthString = instructionsLength.ToString();
+
+        CreateLabel();
+
+        CreateSlider();
 
         //replay.onClick.AddListener(() => {
         //    //Debug.Log("Replaying: " + animator.GetCurrentAnimatorStateInfo(0).fullPathHash);
@@ -162,7 +171,7 @@ public class InstructionsUI : MonoBehaviour
 
     void getButtons()
     {
-        VisualElement root = GameObject.Find("UIDocument").GetComponent<UIDocument>().rootVisualElement;
+        //VisualElement root = GameObject.Find("UIDocument").GetComponent<UIDocument>().rootVisualElement;
 
         next = root.Q<Button>("NextBtn");
         back = root.Q<Button>("BackBtn");

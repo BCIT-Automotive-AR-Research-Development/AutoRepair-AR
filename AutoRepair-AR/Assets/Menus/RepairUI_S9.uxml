@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="Background" style="height: 100%; align-items: stretch; justify-content: flex-start; background-color: rgba(122, 122, 122, 0.16); width: 100%; -unity-background-image-tint-color: rgba(0, 0, 0, 0);">
+    <ui:VisualElement name="Background" style="height: 100%; align-items: stretch; justify-content: flex-start; background-color: rgba(122, 122, 122, 0.16); width: 100%; -unity-background-image-tint-color: rgba(0, 0, 0, 0); display: flex;">
         <ui:VisualElement name="VisualElement1" style="height: 10%;">
             <ui:VisualElement name="SliderHere" style="justify-content: flex-start; align-items: center; margin-left: 10%; height: auto; margin-right: 10%; margin-top: 5%; position: relative;" />
         </ui:VisualElement>
