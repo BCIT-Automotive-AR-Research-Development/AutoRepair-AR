@@ -972,7 +972,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: -5006274513269596767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3562,14 +3562,6 @@ MonoBehaviour:
     Desc: 'Remove the main speaker by twisting counter clockwise then remove speaker
       connector before fully removing it from the car. '
     clip: {fileID: 7400000, guid: 04e10346d568edf48bf24905c1ba489b, type: 2}
-  - Name: Remove Window Bolts
-    Desc: Using a 10mm shallow socket wrench, remove 2 bolts holding the window glass
-      on to the regulator.
-    clip: {fileID: 0}
-  - Name: Remove Window
-    Desc: Remove the window glass by carefully lifting the glass through the window
-      slit, towards the exterior of the car.
-    clip: {fileID: 0}
   - Name: Remove Black Cover
     Desc: Remove the upper black plastic cover to access the window regulator power
       connector. Use a flat-blade screwdriver to press down the topside notch to
@@ -3577,10 +3569,14 @@ MonoBehaviour:
     clip: {fileID: 7400000, guid: d1db68a663b61d64fa9a562ad190a6d0, type: 2}
   - Name: Disconnect Regulator Connector
     Desc: Remove the power connector for the window regulator.
-    clip: {fileID: 0}
+    clip: {fileID: 7400000, guid: a7b31279834f2f34c82524f9dd777826, type: 2}
+  - Name: Remove Window
+    Desc: Remove the window glass by carefully lifting the glass through the window
+      slit, towards the exterior of the car.
+    clip: {fileID: 7400000, guid: cf93d7f84298ca34283df12541200cff, type: 2}
   - Name: Remove Window Regulator
     Desc: Using a 10 mm shallow socket, remove 6 bolts holding the window regulator.
-    clip: {fileID: 0}
+    clip: {fileID: 7400000, guid: 68ad480a943a18a4794c1ed9e066e668, type: 2}
   stepCounter: 0
 --- !u!1 &6171427711427497927
 GameObject:
