@@ -13,19 +13,19 @@ public class InstructionsUI
     public Button next, back, hide;
     private int stepCounter = 0, instructionsLength;
     TaskController task;
-    private string instructionLengthString;
     private SliderInt slider;
     private Label label, stepLabel;
     private StyleSheet circularStyleSheet;
-    
+
     public VisualElement info, sliderHere;
 
-    string[] instructions;
+    List<Step> instructions;
 
     private bool isHidden = false;
     private VisualElement[] allElements;
 
-    private void CreateLabel(){
+    private void CreateLabel()
+    {
         // Create a new Label
         label = new Label();
         label.style.color = Color.white;
@@ -33,7 +33,7 @@ public class InstructionsUI
         label.style.whiteSpace = WhiteSpace.Normal;
         label.style.unityTextAlign = TextAnchor.MiddleCenter;
 
-        label.text = instructions[0]; // Set the text to the first instruction
+        label.text = instructions[0].Desc; // Set the text to the first instruction
 
         // Add the Label to the info VisualElement
         info.Add(label);
@@ -41,7 +41,7 @@ public class InstructionsUI
 
     private void CreateSlider()
     {
-        slider = new SliderInt(0, instructions.Length, SliderDirection.Horizontal, 1);
+        slider = new SliderInt(0, instructions.Count, SliderDirection.Horizontal, 1);
         slider.AddToClassList("circular");
         slider.style.height = Screen.height * 0.1f;
         slider.style.width = Screen.width * 0.75f;
@@ -49,13 +49,16 @@ public class InstructionsUI
         slider.value = stepCounter;
         slider.RegisterValueChangedCallback(evt => {
             stepCounter = evt.newValue;
-            label.text = instructions[stepCounter];
-            stepLabel.text = stepCounter.ToString() + "/" + instructionLengthString;
+            //label.text = instructions[stepCounter];
+            //stepLabel.text = stepCounter.ToString() + "/" + instructionLengthString;
+            updateTaskInfo();
             task.GoToStep(stepCounter);
+            task.PlayStep();
         });
-        
-         // Load and apply circular.uss stylesheet
-        if (circularStyleSheet != null){
+
+        // Load and apply circular.uss stylesheet
+        if (circularStyleSheet != null)
+        {
             slider.styleSheets.Add(circularStyleSheet);
         }
 
@@ -68,7 +71,7 @@ public class InstructionsUI
         // Create label for step number
         stepLabel = new Label();
         stepLabel.style.unityTextAlign = TextAnchor.MiddleCenter;
-        stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
+        stepLabel.text = (stepCounter + 1) + "/" + instructionsLength;
         stepLabel.style.fontSize = Screen.height * 0.02f;
         stepLabel.style.position = Position.Absolute;
         stepLabel.style.top = new StyleLength(30);
@@ -87,26 +90,29 @@ public class InstructionsUI
         getButtons();
 
         next.clicked += () => {
-            // Check if the step counter is still within the range of instructions
-            if (stepCounter < instructions.Length)
-            {
-                // Increase the step counter
-                stepCounter++;
-                // // Update the instructions UI element with the text for the next step
-                // info.text = instructions[stepCounter];
+            task.NextStep();
+            slider.value = task.GetCurrentStep();
+            //// Check if the step counter is still within the range of instructions
+            //if (stepCounter < instructions.Count)
+            //{
+            //    // Increase the step counter
+            //    stepCounter++;
+            //    // // Update the instructions UI element with the text for the next step
+            //    // info.text = instructions[stepCounter];
 
-                // // Update the TextField text for the next step
-                // textField.SetValueWithoutNotify(instructions[stepCounter]);
+            //    // // Update the TextField text for the next step
+            //    // textField.SetValueWithoutNotify(instructions[stepCounter]);
 
-                label.text = instructions[stepCounter - 1];
+            //    //label.text = instructions[stepCounter - 1];
 
-                stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
-                // Update the SliderInt value to the new step counter
-                slider.value = stepCounter;
-
-                // Move to the next step in the task
-                task.NextStep();
-            }
+            //    //stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
+            //    // Update the SliderInt value to the new step counter
+            //    slider.value = stepCounter;
+            //    updateTaskInfo();
+            //    // Move to the next step in the task
+            //    task.NextStep();
+            //    task.PlayStep();
+            //}
         };
 
         back.clicked += () => {
@@ -115,16 +121,18 @@ public class InstructionsUI
             {
                 // Decrease the step counter
                 stepCounter--;
-                // // Update the instructions UI element with the text for the previous step
-                label.text = instructions[stepCounter];
+                //// // Update the instructions UI element with the text for the previous step
+                //label.text = instructions[stepCounter];
 
-                stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
+                //stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
 
                 // Update the SliderInt value to the new step counter
                 slider.value = stepCounter;
+                updateTaskInfo();
 
                 // Move to the previous step in the task
                 task.PreviousStep();
+                task.PlayStep();
             }
         };
 
@@ -155,6 +163,12 @@ public class InstructionsUI
                 isHidden = true;
             }
         };
+
+        //replay.onClick.AddListener(() => {
+        //    //Debug.Log("Replaying: " + animator.GetCurrentAnimatorStateInfo(0).fullPathHash);
+        //    //animator.Play(animator.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, 0);
+        //    task.ReplayStep();
+        //});
     }
 
     // Start is called before the first frame update
@@ -163,21 +177,13 @@ public class InstructionsUI
         // Get Task
         this.task = task;
         // Get Instructions
-        instructions = task.GetStepDescriptions();
-        int instructionsLength = instructions.Length - 1;
-        instructionLengthString = instructionsLength.ToString();
+        instructions = task.GetInstructions();
+        instructionsLength = instructions.Count;
 
         CreateLabel();
 
         CreateSlider();
-        
 
-
-        //replay.onClick.AddListener(() => {
-        //    //Debug.Log("Replaying: " + animator.GetCurrentAnimatorStateInfo(0).fullPathHash);
-        //    //animator.Play(animator.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, 0);
-        //    task.ReplayStep();
-        //});
     }
 
     void getButtons()
@@ -192,6 +198,14 @@ public class InstructionsUI
 
         // Store all Visual Elements in an array for easy access later
         allElements = new VisualElement[] { next, back, info, sliderHere, hide };
+    }
+
+    void updateTaskInfo()
+    {
+        // // Update the instructions UI element with the text for the previous step
+        label.text = instructions[stepCounter].Desc;
+
+        stepLabel.text = (stepCounter + 1) + "/" + instructionsLength;
     }
 
 }
