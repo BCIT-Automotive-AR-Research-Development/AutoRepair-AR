@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="height: 100%; width: 100%; background-color: rgb(66, 73, 101); padding-left: 3%; padding-right: 3%; padding-top: 3%; padding-bottom: 0;">
+        <ui:VisualElement name="container" style="height: auto; width: 100%; flex-basis: 100%; background-color: rgb(83, 101, 120); opacity: 1; min-width: 60%; align-items: center; padding-left: 5%; padding-right: 5%; padding-top: 5%; padding-bottom: 0; border-top-left-radius: 100px; border-bottom-left-radius: 0; border-top-right-radius: 100px; border-bottom-right-radius: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; color: rgb(45, 80, 103); max-width: 100%;">
+            <ui:Label text="Task Selection" display-tooltip-when-elided="true" name="Label" style="height: 159px; font-size: 110%; color: rgb(218, 240, 255); align-items: auto; margin-top: 10%; -unity-font-style: bold;" />
+            <ui:VisualElement name="Divider" style="background-color: rgba(34, 33, 75, 0.68); height: 29px; min-width: 100%; margin-top: 10%;" />
+            <ui:ListView focusable="true" name="task-list" virtualization-method="DynamicHeight" style="height: 474px; color: rgb(157, 213, 250); font-size: 40%; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; padding-left: 0; padding-right: 0; padding-top: 10%; padding-bottom: 10%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

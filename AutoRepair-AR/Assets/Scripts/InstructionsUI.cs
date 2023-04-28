@@ -3,67 +3,63 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
+using System;
 
-public class InstructionsUI : MonoBehaviour
+public class InstructionsUI
 {
+    public Action HideMenu { get; internal set; }
 
-    public Button next, back;
+    VisualElement root;
+    public Button next, back, hide;
     private int stepCounter = 0, instructionsLength;
     TaskController task;
-    private string instructionLengthString;
     private SliderInt slider;
     private Label label, stepLabel;
-    
+    private StyleSheet circularStyleSheet;
+
     public VisualElement info, sliderHere;
 
-    string[] instructions;
-    //  = new string[]{
-    // "Using a metal pick tool, remove screw cover on the door handle then remove the screw (+)",
-    // "Using a metal pick tool, remove screw cover on the door latch handle then remove the screw (+)",
-    // "Using a plastic tool, pry the tweeter speaker starting from the hinge side, then remove the speaker connector cable.",
-    // "Using a plastic tool, pry the whole door interior panel starting from the bottom (9 clips).", 
-    // "Once all clips are loose, lift up the door panel that is now loosely hanging on the door. (Do not pull the panel away from the door, there are connectors still attached to the interior component)",
-    // "Before completely taking off the door panel, disconnect the power window and side window connectors and the cable for the door locking/release mechanism. (2 connectors + 2 wire cables)",
-    // "Remove the metal bracket that was holding the door handle screw in Step 1 by removing 2 screws(+).",
-    // "Remove the vapour barrier carefully without ripping the filament and avoiding getting the bentyl adhesive on self. Feed the 2 cables and 2 connectors in Step 5 through the barrier before removing.",
-    // "Remove black metal panel to access the window regulator. 4 Screws",
-    // "Remove the main speaker by twisting counter clockwise then remove speaker connector before fully removing it from the car.",
-    // "Using a 10mm shallow socket, remove 2 bolts holding the window glass on to the regulator.",
-    // "Remove the window glass by carefully lifting the glass through the window slit, towards the exterior of the car.",
-    // "Remove the upper black plastic cover to access the window regulator power connector. Press down the topside notch to release the cover.",
-    // "Remove the power connector for the window regulator.",
-    // "Using a 10 mm shallow socket, remove 6 bolts holding the window regulator."
-    // };
+    List<Step> instructions;
 
-    private void CreateLabel(){
+    private bool isHidden = false;
+    private VisualElement[] allElements;
+
+    private void CreateLabel()
+    {
         // Create a new Label
         label = new Label();
         label.style.color = Color.white;
-        label.style.fontSize = Screen.height * 0.015f;
+        label.style.fontSize = Screen.height * 0.02f;
         label.style.whiteSpace = WhiteSpace.Normal;
         label.style.unityTextAlign = TextAnchor.MiddleCenter;
 
-        label.text = instructions[0]; // Set the text to the first instruction
+        label.text = instructions[0].Desc; // Set the text to the first instruction
 
         // Add the Label to the info VisualElement
         info.Add(label);
     }
 
-    private void CreateSlider(){
-        slider = new SliderInt(0, instructions.Length, SliderDirection.Horizontal, 1);
+    private void CreateSlider()
+    {
+        slider = new SliderInt(0, instructions.Count - 1, SliderDirection.Horizontal, 1);
+        slider.AddToClassList("circular");
         slider.style.height = Screen.height * 0.1f;
-        slider.style.width = Screen.width * 0.7f;
+        slider.style.width = Screen.width * 0.75f;
+        slider.style.marginTop = Screen.height * 0.05f;
         slider.value = stepCounter;
         slider.RegisterValueChangedCallback(evt => {
             stepCounter = evt.newValue;
-            label.text = instructions[stepCounter];
-            stepLabel.text = stepCounter.ToString() + "/" + instructionLengthString;
+            //label.text = instructions[stepCounter];
+            //stepLabel.text = stepCounter.ToString() + "/" + instructionLengthString;
+            updateTaskInfo();
             task.GoToStep(stepCounter);
+            task.PlayStep();
         });
-        
-        var sliderStyleSheet = Resources.Load<StyleSheet>("Assets/USS/slider-style.uss");
-        if (sliderStyleSheet != null){
-            slider.styleSheets.Add(sliderStyleSheet);
+
+        // Load and apply circular.uss stylesheet
+        if (circularStyleSheet != null)
+        {
+            slider.styleSheets.Add(circularStyleSheet);
         }
 
         // Create container for slider and step label
@@ -75,9 +71,10 @@ public class InstructionsUI : MonoBehaviour
         // Create label for step number
         stepLabel = new Label();
         stepLabel.style.unityTextAlign = TextAnchor.MiddleCenter;
-        stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
-        stepLabel.style.fontSize = Screen.height * 0.015f;
-        stepLabel.style.marginTop = Screen.height * 0.01f;
+        stepLabel.text = (stepCounter + 1) + "/" + instructionsLength;
+        stepLabel.style.fontSize = Screen.height * 0.02f;
+        stepLabel.style.position = Position.Absolute;
+        stepLabel.style.top = new StyleLength(30);
 
         // Add slider and step label to container
         sliderContainer.Add(stepLabel);
@@ -85,68 +82,87 @@ public class InstructionsUI : MonoBehaviour
         sliderHere.Add(sliderContainer);
     }
 
-    // Start is called before the first frame update
-    void OnEnable()
+    public InstructionsUI(VisualElement root)
     {
-        // Get Task
-        task = GameObject.FindGameObjectWithTag("Task").GetComponent<TaskController>();
-        // Get Instructions
-        instructions = task.GetStepDescriptions();
-        int instructionsLength = instructions.Length - 1;
-        instructionLengthString = instructionsLength.ToString();
+        this.root = root;
+
         // Get Buttons
         getButtons();
 
-        CreateLabel();
-
-        CreateSlider();
-
         next.clicked += () => {
-        // Increase the step counter
-        stepCounter++;
-            // Check if the step counter is still within the range of instructions
-            if (stepCounter < instructions.Length) {
-                // // Update the instructions UI element with the text for the next step
-                // info.text = instructions[stepCounter];
+            task.NextStep();
+            slider.value = task.GetCurrentStep();
+            //// Check if the step counter is still within the range of instructions
+            //if (stepCounter < instructions.Count)
+            //{
+            //    // Increase the step counter
+            //    stepCounter++;
+            //    // // Update the instructions UI element with the text for the next step
+            //    // info.text = instructions[stepCounter];
 
-                // // Update the TextField text for the next step
-                // textField.SetValueWithoutNotify(instructions[stepCounter]);
+            //    // // Update the TextField text for the next step
+            //    // textField.SetValueWithoutNotify(instructions[stepCounter]);
 
-                label.text = instructions[stepCounter];
+            //    //label.text = instructions[stepCounter - 1];
 
-                stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
-
-                // Update the SliderInt value to the new step counter
-                slider.value = stepCounter;
-                        
-                // Move to the next step in the task
-                task.NextStep();
-            }
+            //    //stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
+            //    // Update the SliderInt value to the new step counter
+            //    slider.value = stepCounter;
+            //    updateTaskInfo();
+            //    // Move to the next step in the task
+            //    task.NextStep();
+            //    task.PlayStep();
+            //}
         };
 
         back.clicked += () => {
-            // Decrease the step counter
-            stepCounter--;
             // Check if the step counter is still within the range of instructions
-            if (stepCounter >= 0) {
-                // // Update the instructions UI element with the text for the previous step
-                // info.text = instructions[stepCounter];
+            if (stepCounter > 0)
+            {
+                // Decrease the step counter
+                stepCounter--;
+                //// // Update the instructions UI element with the text for the previous step
+                //label.text = instructions[stepCounter];
 
-                // Update the TextField text for the previous step
-                // textField.SetValueWithoutNotify(instructions[stepCounter]);
+                //stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
 
-                label.text = instructions[stepCounter];
-
-                stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
-                
                 // Update the SliderInt value to the new step counter
                 slider.value = stepCounter;
+                updateTaskInfo();
 
                 // Move to the previous step in the task
                 task.PreviousStep();
+                task.PlayStep();
             }
         };
 
+        hide.clicked += () => {
+            if (isHidden)
+            {
+                // Show all Visual Elements
+                foreach (VisualElement element in allElements)
+                {
+                    element.style.display = DisplayStyle.Flex;
+                }
+                // Rotate the Hide button back to its original position
+                hide.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                isHidden = false;
+            }
+            else
+            {
+                // Hide all Visual Elements except the Hide button
+                foreach (VisualElement element in allElements)
+                {
+                    if (element != hide)
+                    {
+                        element.style.display = DisplayStyle.None;
+                    }
+                }
+                // Rotate hide button 180 degrees
+                hide.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+                isHidden = true;
+            }
+        };
 
         //replay.onClick.AddListener(() => {
         //    //Debug.Log("Replaying: " + animator.GetCurrentAnimatorStateInfo(0).fullPathHash);
@@ -155,15 +171,41 @@ public class InstructionsUI : MonoBehaviour
         //});
     }
 
+    // Start is called before the first frame update
+    public void SetTask(TaskController task)
+    {
+        // Get Task
+        this.task = task;
+        // Get Instructions
+        instructions = task.GetInstructions();
+        instructionsLength = instructions.Count;
+
+        CreateLabel();
+
+        CreateSlider();
+
+    }
+
     void getButtons()
     {
-        VisualElement root = GameObject.Find("UIDocument").GetComponent<UIDocument>().rootVisualElement;
+        //VisualElement root = GameObject.Find("UIDocument").GetComponent<UIDocument>().rootVisualElement;
 
         next = root.Q<Button>("NextBtn");
         back = root.Q<Button>("BackBtn");
         info = root.Q<VisualElement>("InfoText");
         sliderHere = root.Q<VisualElement>("SliderHere");
+        hide = root.Q<Button>("HideBtn");
 
+        // Store all Visual Elements in an array for easy access later
+        allElements = new VisualElement[] { next, back, info, sliderHere, hide };
+    }
+
+    void updateTaskInfo()
+    {
+        // // Update the instructions UI element with the text for the previous step
+        label.text = instructions[stepCounter].Desc;
+
+        stepLabel.text = (stepCounter + 1) + "/" + instructionsLength;
     }
 
 }

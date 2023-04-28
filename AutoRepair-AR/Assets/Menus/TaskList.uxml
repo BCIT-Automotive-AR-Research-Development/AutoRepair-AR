@@ -1,7 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="container" style="height: auto; width: auto; flex-basis: 100%; background-color: rgba(122, 122, 122, 255); opacity: 1;">
-        <ui:Label text="Tasks" display-tooltip-when-elided="true" name="Label" style="height: 159px; font-size: 142px; color: rgba(255, 255, 255, 255);" />
-        <ui:VisualElement name="Divider" style="background-color: rgba(0, 0, 0, 255); height: 29px;" />
-        <ui:ListView focusable="true" name="task-list" virtualization-method="DynamicHeight" style="height: 474px;" />
-    </ui:VisualElement>
-</ui:UXML>

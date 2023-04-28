@@ -1,26 +1,34 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class TaskSelectorController : MonoBehaviour
+public class TaskSelectorController
 {
+    public Action HideMenu { get; internal set; }
+
     // UXML template for list entries
-    [SerializeField]
     VisualTreeAsset listEntryTemplate;
     VisualElement root;
     ListView taskList;
 
-    public TaskList list;
-    GameObject spawnedTask;
+    TaskList list;
+    public TaskList.Task selectedTask;
+    public GameObject spawnedTask;
 
-    private void OnEnable()
+
+    public TaskSelectorController(VisualElement root, VisualTreeAsset listEntryTemplate, TaskList list)
     {
-        root = GetComponent<UIDocument>().rootVisualElement;
+        this.root = root;
+        this.listEntryTemplate = listEntryTemplate;
+        this.list = list;
         InitializeTaskList();
     }
+    //private void OnEnable()
+    //{
+
+    //}
 
     private void InitializeTaskList()
     {
@@ -46,21 +54,23 @@ public class TaskSelectorController : MonoBehaviour
     {
 
         // Get the currently selected item directly from the ListView
-        var selectedTask = taskList.selectedItem as TaskList.Task;
+        selectedTask = taskList.selectedItem as TaskList.Task;
         if (selectedTask == null) return;
 
-        spawnedTask = spawnedTask = Instantiate(selectedTask.target);
+        spawnedTask = GameObject.Instantiate(selectedTask.target);
+        //Hide Menu
+        HideMenu();
     }
 
     public void LoadTask(int index)
     {
-        spawnedTask = Instantiate(list.tasks[index].target);
+        spawnedTask = GameObject.Instantiate(list.tasks[index].target);
         //Hide TaskSelection UI
     }
 
     public void UnloadTask()
     {
-        Destroy(spawnedTask);
+        GameObject.Destroy(spawnedTask);
         //Show TaskSelection UI
     }
 }

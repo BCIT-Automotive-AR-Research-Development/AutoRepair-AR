@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="TaskList" src="project://database/Assets/Menus/TaskSelector.uxml?fileID=9197481963319205126&amp;guid=a5c536f5c4b3b154fab402f9dbae6987&amp;type=3#TaskSelector" />
+    <ui:Template name="RepairUI_S9" src="project://database/Assets/Menus/RepairUI_S9.uxml?fileID=9197481963319205126&amp;guid=fed7109fc39bcb140a348cca1b1593e4&amp;type=3#RepairUI_S9" />
+    <ui:Instance template="TaskList" name="TaskSelector" style="display: flex; height: 100%;" />
+    <ui:Instance template="RepairUI_S9" name="InstructionUI" style="display: none; height: 100%;" />
+</ui:UXML>
