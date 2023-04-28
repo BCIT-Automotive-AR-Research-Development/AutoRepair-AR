@@ -1387,7 +1387,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: -3718118493294603951}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2148,7 +2148,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+  - {fileID: 2100000, guid: c2b8269460393fc4e97d58bcb58f8b07, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3520,8 +3520,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instructions:
   - Name: Initial
-    Desc: This is how to remove the window regulator from the door.
-    clip: {fileID: 0}
+    Desc: This is how to remove the Window Regulator from a door.
+    clip: {fileID: 7400000, guid: 2e8f8be23ea6ba94793c3b39a9a74c4a, type: 2}
   - Name: Lower Widnow
     Desc: Lower the window
     clip: {fileID: 7400000, guid: c843cfacc65383e40aa6432a874f42ad, type: 2}
@@ -3530,7 +3530,7 @@ MonoBehaviour:
       remove the screw
     clip: {fileID: 7400000, guid: 58c748e133eb1b14889a0b6af4d1d60a, type: 2}
   - Name: Remove Door Handle Screw Cover
-    Desc: Using a metal pick tool, remove screw cover on the door latch handle then
+    Desc: Using a metal pick tool, remove screw cover on the door handle and then
       remove the screw
     clip: {fileID: 7400000, guid: d52ef88eb08e8bc48b6926163ae9d62e, type: 2}
   - Name: Remove Tweeter Speaker
@@ -3547,7 +3547,7 @@ MonoBehaviour:
       the door locking/release mechanism. (2 connectors + 2 wire cables)
     clip: {fileID: 7400000, guid: faeceb7ce400a2142811f4b2ba541800, type: 2}
   - Name: Remove Door Trim
-    Desc: Remove the door panel
+    Desc: 
     clip: {fileID: 7400000, guid: dd63f77499d0ff7438ee927936c47017, type: 2}
   - Name: Remove Metal Bracket
     Desc: 'Remove the metal bracket that was holding the door handle screw in Step
