@@ -6,40 +6,26 @@ using UnityEngine.UIElements;
 
 public class InstructionsUI : MonoBehaviour
 {
-
-    public Button next, back;
+    public Button next, back, hide;
     private int stepCounter = 0, instructionsLength;
     TaskController task;
     private string instructionLengthString;
     private SliderInt slider;
     private Label label, stepLabel;
+    private StyleSheet circularStyleSheet;
     
     public VisualElement info, sliderHere;
 
     string[] instructions;
-    //  = new string[]{
-    // "Using a metal pick tool, remove screw cover on the door handle then remove the screw (+)",
-    // "Using a metal pick tool, remove screw cover on the door latch handle then remove the screw (+)",
-    // "Using a plastic tool, pry the tweeter speaker starting from the hinge side, then remove the speaker connector cable.",
-    // "Using a plastic tool, pry the whole door interior panel starting from the bottom (9 clips).", 
-    // "Once all clips are loose, lift up the door panel that is now loosely hanging on the door. (Do not pull the panel away from the door, there are connectors still attached to the interior component)",
-    // "Before completely taking off the door panel, disconnect the power window and side window connectors and the cable for the door locking/release mechanism. (2 connectors + 2 wire cables)",
-    // "Remove the metal bracket that was holding the door handle screw in Step 1 by removing 2 screws(+).",
-    // "Remove the vapour barrier carefully without ripping the filament and avoiding getting the bentyl adhesive on self. Feed the 2 cables and 2 connectors in Step 5 through the barrier before removing.",
-    // "Remove black metal panel to access the window regulator. 4 Screws",
-    // "Remove the main speaker by twisting counter clockwise then remove speaker connector before fully removing it from the car.",
-    // "Using a 10mm shallow socket, remove 2 bolts holding the window glass on to the regulator.",
-    // "Remove the window glass by carefully lifting the glass through the window slit, towards the exterior of the car.",
-    // "Remove the upper black plastic cover to access the window regulator power connector. Press down the topside notch to release the cover.",
-    // "Remove the power connector for the window regulator.",
-    // "Using a 10 mm shallow socket, remove 6 bolts holding the window regulator."
-    // };
+
+    private bool isHidden = false;
+    private VisualElement[] allElements;
 
     private void CreateLabel(){
         // Create a new Label
         label = new Label();
         label.style.color = Color.white;
-        label.style.fontSize = Screen.height * 0.015f;
+        label.style.fontSize = Screen.height * 0.02f;
         label.style.whiteSpace = WhiteSpace.Normal;
         label.style.unityTextAlign = TextAnchor.MiddleCenter;
 
@@ -51,8 +37,10 @@ public class InstructionsUI : MonoBehaviour
 
     private void CreateSlider(){
         slider = new SliderInt(0, instructions.Length, SliderDirection.Horizontal, 1);
+        slider.AddToClassList("circular");
         slider.style.height = Screen.height * 0.1f;
-        slider.style.width = Screen.width * 0.7f;
+        slider.style.width = Screen.width * 0.75f;
+        slider.style.marginTop = Screen.height * 0.05f;
         slider.value = stepCounter;
         slider.RegisterValueChangedCallback(evt => {
             stepCounter = evt.newValue;
@@ -61,9 +49,9 @@ public class InstructionsUI : MonoBehaviour
             task.GoToStep(stepCounter);
         });
         
-        var sliderStyleSheet = Resources.Load<StyleSheet>("Assets/USS/slider-style.uss");
-        if (sliderStyleSheet != null){
-            slider.styleSheets.Add(sliderStyleSheet);
+         // Load and apply circular.uss stylesheet
+        if (circularStyleSheet != null){
+            slider.styleSheets.Add(circularStyleSheet);
         }
 
         // Create container for slider and step label
@@ -76,8 +64,9 @@ public class InstructionsUI : MonoBehaviour
         stepLabel = new Label();
         stepLabel.style.unityTextAlign = TextAnchor.MiddleCenter;
         stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
-        stepLabel.style.fontSize = Screen.height * 0.015f;
-        stepLabel.style.marginTop = Screen.height * 0.01f;
+        stepLabel.style.fontSize = Screen.height * 0.02f;
+        stepLabel.style.position = Position.Absolute;
+        stepLabel.style.top = new StyleLength(30);
 
         // Add slider and step label to container
         sliderContainer.Add(stepLabel);
@@ -97,8 +86,12 @@ public class InstructionsUI : MonoBehaviour
         // Get Buttons
         getButtons();
 
+        circularStyleSheet = Resources.Load<StyleSheet>("Assets/_UI/circular.uss");
+
+        // Create Label
         CreateLabel();
 
+        // Create Slider
         CreateSlider();
 
         next.clicked += () => {
@@ -107,15 +100,9 @@ public class InstructionsUI : MonoBehaviour
             // Check if the step counter is still within the range of instructions
             if (stepCounter < instructions.Length) {
                 // // Update the instructions UI element with the text for the next step
-                // info.text = instructions[stepCounter];
-
-                // // Update the TextField text for the next step
-                // textField.SetValueWithoutNotify(instructions[stepCounter]);
-
                 label.text = instructions[stepCounter];
 
                 stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
-
                 // Update the SliderInt value to the new step counter
                 slider.value = stepCounter;
                         
@@ -130,20 +117,42 @@ public class InstructionsUI : MonoBehaviour
             // Check if the step counter is still within the range of instructions
             if (stepCounter >= 0) {
                 // // Update the instructions UI element with the text for the previous step
-                // info.text = instructions[stepCounter];
-
-                // Update the TextField text for the previous step
-                // textField.SetValueWithoutNotify(instructions[stepCounter]);
-
                 label.text = instructions[stepCounter];
 
                 stepLabel.text = stepCounter.ToString() + "/" + instructionsLength.ToString();
-                
                 // Update the SliderInt value to the new step counter
                 slider.value = stepCounter;
 
                 // Move to the previous step in the task
                 task.PreviousStep();
+            }
+        };
+
+        hide.clicked += () => {
+            if (isHidden)
+            {
+                // Show all Visual Elements
+                foreach (VisualElement element in allElements)
+                {
+                    element.style.display = DisplayStyle.Flex;
+                }
+                // Rotate the Hide button back to its original position
+                hide.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                isHidden = false;
+            }
+            else
+            {
+                // Hide all Visual Elements except the Hide button
+                foreach (VisualElement element in allElements)
+                {
+                    if (element != hide)
+                    {
+                        element.style.display = DisplayStyle.None;
+                    }
+                }
+                // Rotate hide button 180 degrees
+                hide.transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+                isHidden = true;
             }
         };
 
@@ -163,7 +172,10 @@ public class InstructionsUI : MonoBehaviour
         back = root.Q<Button>("BackBtn");
         info = root.Q<VisualElement>("InfoText");
         sliderHere = root.Q<VisualElement>("SliderHere");
+        hide = root.Q<Button>("HideBtn");
 
+        // Store all Visual Elements in an array for easy access later
+        allElements = new VisualElement[] { next, back, info, sliderHere, hide };
     }
 
 }
