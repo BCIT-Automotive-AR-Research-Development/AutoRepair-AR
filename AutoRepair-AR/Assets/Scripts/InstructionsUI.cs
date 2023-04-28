@@ -41,7 +41,7 @@ public class InstructionsUI
 
     private void CreateSlider()
     {
-        slider = new SliderInt(0, instructions.Count, SliderDirection.Horizontal, 1);
+        slider = new SliderInt(0, instructions.Count - 1, SliderDirection.Horizontal, 1);
         slider.AddToClassList("circular");
         slider.style.height = Screen.height * 0.1f;
         slider.style.width = Screen.width * 0.75f;
