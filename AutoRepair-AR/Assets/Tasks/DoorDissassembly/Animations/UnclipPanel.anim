@@ -194,6 +194,83 @@ AnimationClip:
     path: Door_Pannel
     classID: 23
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Cable_Speaker_Tweeter
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/Cable_Latch
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/White_Connector_Port
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/White_Connector/Cable_White_Connector
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/White_Connector
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/Cable_Lock/BezierCurve
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/Cable_Lock
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/Cable_Latch/BezierCurve.001
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/Blue_Connector_Port
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/Blue_Connector/Cable_Blue_Connector
+    classID: 23
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    attribute: m_Materials.Array.data[0]
+    path: Door_Pannel/Blue_Connector
+    classID: 23
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -236,8 +313,96 @@ AnimationClip:
       typeID: 23
       customType: 21
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 189536371
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 507056033
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3462191038
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 2489806301
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3443999040
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 1844776533
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 911317106
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 498005700
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 4105064974
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 2435251290
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 1736868610
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 23
+      customType: 21
+      isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 2100000, guid: c2b8269460393fc4e97d58bcb58f8b07, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
+    - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
