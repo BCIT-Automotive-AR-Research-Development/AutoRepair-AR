@@ -765,6 +765,8 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
     - time: 0
+      value: {fileID: 2100000, guid: 166f0b6fef65a734a8a8149cf197d6f3, type: 2}
+    - time: 10
       value: {fileID: 2100000, guid: c2b8269460393fc4e97d58bcb58f8b07, type: 2}
     attribute: m_Materials.Array.data[0]
     path: Window
@@ -1096,6 +1098,7 @@ AnimationClip:
     - {fileID: 2100000, guid: 5fd7359360569804d8a7f988d95ae169, type: 2}
     - {fileID: 2100000, guid: c2b8269460393fc4e97d58bcb58f8b07, type: 2}
     - {fileID: 2100000, guid: c2b8269460393fc4e97d58bcb58f8b07, type: 2}
+    - {fileID: 2100000, guid: 166f0b6fef65a734a8a8149cf197d6f3, type: 2}
     - {fileID: 2100000, guid: c2b8269460393fc4e97d58bcb58f8b07, type: 2}
     - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
     - {fileID: 2100000, guid: b4f5332c8b2fe2c408f25ce147d335ec, type: 2}
