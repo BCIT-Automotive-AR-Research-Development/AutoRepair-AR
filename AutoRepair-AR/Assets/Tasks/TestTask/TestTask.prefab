@@ -45,13 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a4470aa8f1eb9f479b72491654c61cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  instructions:
-  - Desc: Step 1
-    clip: {fileID: 7400000, guid: 13011b222006f8f4886cffba40fbbfdd, type: 2}
-  - Desc: Step 2
-    clip: {fileID: 7400000, guid: cc4f0e567824bca4592bea6b535a1a9b, type: 2}
-  - Desc: Step 3
-    clip: {fileID: 7400000, guid: ae173dbf1fac71b43a3ebc4f8b8238f1, type: 2}
+  instructions: []
   stepCounter: 0
 --- !u!95 &8097946649921664182
 Animator:

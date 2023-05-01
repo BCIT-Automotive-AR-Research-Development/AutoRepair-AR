@@ -1,31 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-3098156060211134098
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Master
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ae0980158279b4a499fcf64e093165c1, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1107 &-1892275590178167103
 AnimatorStateMachine:
   serializedVersion: 6
@@ -40,22 +14,19 @@ AnimatorStateMachine:
     m_Position: {x: 230, y: 150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8342806014714094601}
-    m_Position: {x: 521.8185, y: 430.84015, z: 0}
+    m_Position: {x: 250, y: 340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6291446345248486381}
-    m_Position: {x: 531.8185, y: 440.84015, z: 0}
+    m_Position: {x: 490, y: 230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4282715565085685720}
-    m_Position: {x: 541.8185, y: 450.84015, z: 0}
+    m_Position: {x: 460, y: 290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8324557004926907672}
-    m_Position: {x: 551.8185, y: 460.84015, z: 0}
+    m_Position: {x: 400, y: 390, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -41450079937655906}
-    m_Position: {x: 561.8185, y: 470.84015, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -3098156060211134098}
-    m_Position: {x: 371.8384, y: 307.00107, z: 0}
+    m_Position: {x: 430, y: 460, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
