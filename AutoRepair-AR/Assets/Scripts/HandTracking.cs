@@ -38,6 +38,7 @@ public class HandTracking : MonoBehaviour
             TaskWindowPrefab.transform.Rotate(90f, 0f, 90f);
 
             ToggleSwitch.transform.position = pose.Position;
+            // x axis (negative direction) how far away from wrist joint (or Task selector screen)
             ToggleSwitch.transform.Translate(-0.15f, 0f, -0.05f);
             ToggleSwitch.transform.rotation = pose.Rotation;
             ToggleSwitch.transform.Rotate(90f, 0f, 90f);
