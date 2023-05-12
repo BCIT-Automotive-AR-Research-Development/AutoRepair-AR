@@ -181,7 +181,6 @@ public class InstructionsUI
         instructionsLength = instructions.Count;
 
         CreateLabel();
-
         CreateSlider();
 
     }
