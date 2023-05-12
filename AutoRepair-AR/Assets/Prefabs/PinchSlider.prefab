@@ -1226,8 +1226,8 @@ MonoBehaviour:
   snapToPosition: 1
   thumbCollider: {fileID: 4536504782839979111}
   touchCollider: {fileID: 430449111430787343}
-  sliderValue: 0.5
-  useSliderStepDivisions: 0
+  sliderValue: 0
+  useSliderStepDivisions: 1
   sliderStepDivisions: 1
   trackVisuals: {fileID: 7307063431327029218}
   tickMarks: {fileID: 7307063430561165487}
