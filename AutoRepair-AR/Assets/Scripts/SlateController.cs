@@ -13,9 +13,10 @@ public class SlateController : MonoBehaviour
     public PinchSlider slider;
     public TaskController task;
     public Interactable next, previous;
-    public TextMeshPro label;
+    public TextMeshPro stepLabel, stepDesc;
 
-    private int stepCounter = 0, instructionsLength;
+    [SerializeField]
+    private int stepCounter = 0, instructionsLength, sliderStepDivisions;
 
     //public VisualElement info, sliderHere;
 
@@ -41,73 +42,53 @@ public class SlateController : MonoBehaviour
 
     private void SetSlider()
     {
-        slider.SliderStepDivisions = instructionsLength;
-        slider.OnValueUpdated.AddListener((value) => {
-            stepCounter = (int) value.NewValue * instructionsLength;
-            task.GoToStep(stepCounter);
-            updateTaskInfo();
-        });
+        sliderStepDivisions = instructionsLength - 1;
+        slider.SliderStepDivisions = sliderStepDivisions;
+    }
 
+    public void OnSliderValueUpdate(SliderEventData call)
+    {
+        stepCounter = (int) (call.NewValue * sliderStepDivisions);
+        updateTaskInfo();
+        task.GoToStep(stepCounter);
+        task.PlayStep();
+    }
+
+    public void OnNextClick()
+    {
+        task.NextStep();
+        slider.SliderValue = (float)task.GetCurrentStep() / sliderStepDivisions;
+    }
+
+    public void OnPreviousClick()
+    {
+        task.PreviousStep();
+        slider.SliderValue = (float)task.GetCurrentStep() / sliderStepDivisions;
     }
 
     private void Start()
     {
-        // Get Buttons
-        //getButtons();
-        
         SetTask();
-        next.OnClick.AddListener(() => {
-            task.NextStep();
-            //slider.value = task.GetCurrentStep();
-        });
+        SetSlider();
+        updateTaskInfo();
 
-        previous.OnClick.AddListener(() => {
-            task.PreviousStep();
-            //slider.value = task.GetCurrentStep();
-        });
-
-        //replay.onClick.AddListener(() => {
-        //    //Debug.Log("Replaying: " + animator.GetCurrentAnimatorStateInfo(0).fullPathHash);
-        //    //animator.Play(animator.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, 0);
-        //    task.ReplayStep();
-        //});
     }
 
     // Start is called before the first frame update
     public void SetTask()
     {
         // Get Task
-        task = GameObject.FindGameObjectWithTag("Task").GetComponentInParent<TaskController>();
+        task = GameObject.FindGameObjectWithTag("Task").GetComponent<TaskController>();
 
         // Get Instructions
         instructions = task.GetInstructions();
         instructionsLength = instructions.Count;
-
-        //SetLabel();
-        SetSlider();
-
     }
-
-    //void getButtons()
-    //{
-    //    //VisualElement root = GameObject.Find("UIDocument").GetComponent<UIDocument>().rootVisualElement;
-
-    //    next = Child
-    //    previous = root.Q<Button>("BackBtn");
-    //    info = root.Q<VisualElement>("InfoText");
-    //    sliderHere = root.Q<VisualElement>("SliderHere");
-    //    hide = root.Q<Button>("HideBtn");
-
-    //    // Store all Visual Elements in an array for easy access later
-    //    allElements = new VisualElement[] { next, previous, info, sliderHere, hide };
-    //}
 
     void updateTaskInfo()
     {
-        // // Update the instructions UI element with the text for the previous step
-        label.text = instructions[stepCounter].Desc;
-
-        //stepLabel.text = (stepCounter + 1) + "/" + instructionsLength;
+        stepLabel.text = (stepCounter + 1) + "/" + instructionsLength;
+        stepDesc.text = instructions[stepCounter].Desc;
     }
 
 }
