@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1da438a5ff7a4424d981de2c314817d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TaskWindowPrefab: {fileID: 3515418990045158255, guid: b9e25a20ddeee9042a089ba3c7f12dcf,
+  TaskWindowPrefab: {fileID: 5616039551172100947, guid: 29c6109150bdd44499116ea92f8c72a0,
     type: 3}
   ToggleSwitch: {fileID: 1850867357197028, guid: 6a84bc4abee729b4ca65addb8879264c,
     type: 3}
