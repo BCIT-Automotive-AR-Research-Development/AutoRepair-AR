@@ -10,7 +10,7 @@ public class InstructionsUI
     public Action HideMenu { get; internal set; }
 
     VisualElement root;
-    public Button next, back, hide;
+    public Button next, back, hide, home;
     private int stepCounter = 0, instructionsLength;
     TaskController task;
     private SliderInt slider;
@@ -26,60 +26,68 @@ public class InstructionsUI
 
     private void CreateLabel()
     {
-        // Create a new Label
-        label = new Label();
-        label.style.color = Color.white;
-        label.style.fontSize = Screen.height * 0.02f;
-        label.style.whiteSpace = WhiteSpace.Normal;
-        label.style.unityTextAlign = TextAnchor.MiddleCenter;
+        // Check if label already exists
+        if (label == null)
+        {
+            // Create a new Label
+            label = new Label();
+            label.style.color = Color.white;
+            label.style.fontSize = Screen.height * 0.02f;
+            label.style.whiteSpace = WhiteSpace.Normal;
+            label.style.unityTextAlign = TextAnchor.MiddleCenter;
 
-        label.text = instructions[0].Desc; // Set the text to the first instruction
+            label.text = instructions[0].Desc; // Set the text to the first instruction
 
-        // Add the Label to the info VisualElement
-        info.Add(label);
+            // Add the Label to the info VisualElement
+            info.Add(label);
+        }
     }
 
     private void CreateSlider()
     {
-        slider = new SliderInt(0, instructions.Count - 1, SliderDirection.Horizontal, 1);
-        slider.AddToClassList("circular");
-        slider.style.height = Screen.height * 0.1f;
-        slider.style.width = Screen.width * 0.75f;
-        slider.style.marginTop = Screen.height * 0.05f;
-        slider.value = stepCounter;
-        slider.RegisterValueChangedCallback(evt => {
-            stepCounter = evt.newValue;
-            //label.text = instructions[stepCounter];
-            //stepLabel.text = stepCounter.ToString() + "/" + instructionLengthString;
-            updateTaskInfo();
-            task.GoToStep(stepCounter);
-            task.PlayStep();
-        });
-
-        // Load and apply circular.uss stylesheet
-        if (circularStyleSheet != null)
+        // Check if slider already exists
+        if (slider == null)
         {
-            slider.styleSheets.Add(circularStyleSheet);
+            slider = new SliderInt(0, instructions.Count - 1, SliderDirection.Horizontal, 1);
+            slider.AddToClassList("circular");
+            slider.style.height = Screen.height * 0.1f;
+            slider.style.width = Screen.width * 0.75f;
+            slider.style.marginTop = Screen.height * 0.05f;
+            slider.value = stepCounter;
+            slider.RegisterValueChangedCallback(evt => {
+                stepCounter = evt.newValue;
+                //label.text = instructions[stepCounter];
+                //stepLabel.text = stepCounter.ToString() + "/" + instructionLengthString;
+                updateTaskInfo();
+                task.GoToStep(stepCounter);
+                task.PlayStep();
+            });
+
+            // Load and apply circular.uss stylesheet
+            if (circularStyleSheet != null)
+            {
+                slider.styleSheets.Add(circularStyleSheet);
+            }
+
+            // Create container for slider and step label
+            VisualElement sliderContainer = new VisualElement();
+            sliderContainer.style.justifyContent = Justify.Center;
+            sliderContainer.style.alignItems = Align.Center;
+            sliderContainer.style.flexDirection = FlexDirection.Column;
+
+            // Create label for step number
+            stepLabel = new Label();
+            stepLabel.style.unityTextAlign = TextAnchor.MiddleCenter;
+            stepLabel.text = (stepCounter + 1) + "/" + instructionsLength;
+            stepLabel.style.fontSize = Screen.height * 0.02f;
+            stepLabel.style.position = Position.Absolute;
+            stepLabel.style.top = new StyleLength(30);
+
+            // Add slider and step label to container
+            sliderContainer.Add(stepLabel);
+            sliderContainer.Add(slider);
+            sliderHere.Add(sliderContainer);
         }
-
-        // Create container for slider and step label
-        VisualElement sliderContainer = new VisualElement();
-        sliderContainer.style.justifyContent = Justify.Center;
-        sliderContainer.style.alignItems = Align.Center;
-        sliderContainer.style.flexDirection = FlexDirection.Column;
-
-        // Create label for step number
-        stepLabel = new Label();
-        stepLabel.style.unityTextAlign = TextAnchor.MiddleCenter;
-        stepLabel.text = (stepCounter + 1) + "/" + instructionsLength;
-        stepLabel.style.fontSize = Screen.height * 0.02f;
-        stepLabel.style.position = Position.Absolute;
-        stepLabel.style.top = new StyleLength(30);
-
-        // Add slider and step label to container
-        sliderContainer.Add(stepLabel);
-        sliderContainer.Add(slider);
-        sliderHere.Add(sliderContainer);
     }
 
     public InstructionsUI(VisualElement root)
@@ -164,6 +172,11 @@ public class InstructionsUI
             }
         };
 
+        home.clicked += () => {
+            HideMenu();
+            // Hide all Visual Elements except the Hide button
+        };
+
         //replay.onClick.AddListener(() => {
         //    //Debug.Log("Replaying: " + animator.GetCurrentAnimatorStateInfo(0).fullPathHash);
         //    //animator.Play(animator.GetCurrentAnimatorStateInfo(0).fullPathHash, -1, 0);
@@ -183,7 +196,6 @@ public class InstructionsUI
         CreateLabel();
 
         CreateSlider();
-
     }
 
     void getButtons()
@@ -195,9 +207,10 @@ public class InstructionsUI
         info = root.Q<VisualElement>("InfoText");
         sliderHere = root.Q<VisualElement>("SliderHere");
         hide = root.Q<Button>("HideBtn");
+        home = root.Q<Button>("HomeBtn");
 
         // Store all Visual Elements in an array for easy access later
-        allElements = new VisualElement[] { next, back, info, sliderHere, hide };
+        allElements = new VisualElement[] { next, back, info, sliderHere, hide, home };
     }
 
     void updateTaskInfo()

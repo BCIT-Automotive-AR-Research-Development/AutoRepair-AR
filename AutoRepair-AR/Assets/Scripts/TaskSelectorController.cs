@@ -57,6 +57,10 @@ public class TaskSelectorController
         selectedTask = taskList.selectedItem as TaskList.Task;
         if (selectedTask == null) return;
 
+        if (spawnedTask != null) {
+            GameObject.Destroy(spawnedTask);
+        };
+        
         spawnedTask = GameObject.Instantiate(selectedTask.target);
         //Hide Menu
         HideMenu();
