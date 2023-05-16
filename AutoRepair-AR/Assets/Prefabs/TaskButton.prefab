@@ -106,7 +106,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8789385138158828790}
   - component: {fileID: 6447492895731099956}
-  - component: {fileID: 8494635714723228203}
   - component: {fileID: 1862818569396888600}
   m_Layer: 0
   m_Name: TextMeshPro
@@ -177,14 +176,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &8494635714723228203
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2607286588928328711}
-  m_CullTransparentMesh: 0
 --- !u!114 &1862818569396888600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,10 +279,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2984136506698981191}
   - component: {fileID: 8693688515881335200}
-  - component: {fileID: 554996741662384718}
   - component: {fileID: 6907365334369842318}
   m_Layer: 0
-  m_Name: TextMeshPro
+  m_Name: TaskName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,14 +349,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!222 &554996741662384718
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3416411010540591112}
-  m_CullTransparentMesh: 0
 --- !u!114 &6907365334369842318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,6 +1175,7 @@ GameObject:
   - component: {fileID: 4367364831151614412}
   - component: {fileID: 5128988402707110224}
   - component: {fileID: 8896130907975875654}
+  - component: {fileID: 702599980730699175}
   m_Layer: 0
   m_Name: TaskButton
   m_TagString: Untagged
@@ -1394,9 +1377,9 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: Increment
+      - m_Target: {fileID: 702599980730699175}
+        m_TargetAssemblyTypeName: TaskButtonController, Assembly-CSharp
+        m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1707,6 +1690,21 @@ MonoBehaviour:
     type: 2}
   iconSet: {fileID: 11400000, guid: 8b386ef895f7c924f8c4b03d1d3ed683, type: 2}
   defaultIconSet: {fileID: 11400000, guid: 8b386ef895f7c924f8c4b03d1d3ed683, type: 2}
+--- !u!114 &702599980730699175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8313331503456379560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf074cea3ba3a644da57a2584662c1f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskButtonName: {fileID: 6907365334369842318}
+  InstructionsSlatePrefab: {fileID: 7779420039263858270, guid: b1351b947d759ae409c487a8dce5f559,
+    type: 3}
 --- !u!1 &8891709271519783650
 GameObject:
   m_ObjectHideFlags: 0
