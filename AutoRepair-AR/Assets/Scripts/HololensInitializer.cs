@@ -1,3 +1,4 @@
+using Microsoft.MixedReality.Toolkit.UI;
 using Microsoft.MixedReality.Toolkit.Utilities;
 using System.Collections;
 using System.Collections.Generic;
@@ -27,11 +28,16 @@ public class HololensInitializer : MonoBehaviour
         foreach (var task in masterTaskList.tasks)
         {
             GameObject taskButton = Instantiate(TaskSelectorButtonPrefab);
-            taskButton.GetComponent<TaskButtonController>().SetTask(task);
+            TaskButtonController taskButtonController = taskButton.GetComponent<TaskButtonController>();
+            taskButtonController.SetTask(task);
+            taskButtonController.HideMenu = () => ToggleTaskSelectorMenu(false);
             taskButton.transform.parent = taskGrid.transform;
         }
         taskGrid.GetComponent<GridObjectCollection>().UpdateCollection();
     }
 
-
+    void ToggleTaskSelectorMenu(bool enable)
+    {
+        TaskSelector.SetActive(enable);
+    }
 }

@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System;
 
 public class TaskButtonController : MonoBehaviour
 {
+    public Action HideMenu { get; internal set; }
+
     [SerializeField]
     TextMeshPro taskButtonName;
     [SerializeField]
@@ -23,5 +26,6 @@ public class TaskButtonController : MonoBehaviour
     {
         spawnedTask = GameObject.Instantiate(task.target);
         instructionSlate = GameObject.Instantiate(InstructionsSlatePrefab, spawnedTask.transform.position + new Vector3(0, 0, -1), spawnedTask.transform.rotation * Quaternion.Euler(0, -90, 0), spawnedTask.transform);
+        HideMenu();
     }
 }
