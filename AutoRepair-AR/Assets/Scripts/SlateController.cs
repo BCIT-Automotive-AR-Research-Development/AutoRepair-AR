@@ -12,8 +12,9 @@ public class SlateController : MonoBehaviour
     public Action HideMenu { get; internal set; }
     public PinchSlider slider;
     public TaskController task;
-    public Interactable next, previous;
+    public Interactable next, previous, replay, offset;
     public TextMeshPro stepLabel, stepDesc;
+    
 
     [SerializeField]
     private int stepCounter = 0, instructionsLength, sliderStepDivisions;
@@ -52,6 +53,32 @@ public class SlateController : MonoBehaviour
         updateTaskInfo();
         task.GoToStep(stepCounter);
         task.PlayStep();
+    }
+
+    public void OnReplayClick()
+    {
+        task.PlayStep();
+    }
+
+    public void OnOffsetClick()
+    {
+        task.OffsetToggle();
+    /*   isMovementEnabled = !isMovementEnabled; // Toggle the flag
+
+        foreach (GameObject obj in movableObjects)
+        {
+            // Get the object's original position
+            Vector3 originalPosition = obj.GetComponent<OriginalPosition>().position;
+
+            // Enable or disable the object's movement based on the flag
+            obj.GetComponent<DraggableObject>().enabled = isMovementEnabled;
+
+            if (!isMovementEnabled)
+            {
+                // Reset the object's position to its original spot
+                obj.transform.position = originalPosition;
+            }
+        }*/
     }
 
     public void OnNextClick()
