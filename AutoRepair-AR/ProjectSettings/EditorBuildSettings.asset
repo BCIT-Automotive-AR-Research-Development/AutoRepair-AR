@@ -9,15 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Release Scenes/HoloLens.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
-    path: Assets/Scenes/Step-List.unity
-    guid: f0206f9c2fac7684396e9d7c978febdc
-  - enabled: 0
-    path: Assets/Scenes/TutorialStart.unity
-    guid: c725e6e2f3d164f46858c5f8647166a7
-  - enabled: 0
-    path: Assets/Scenes/VuforiaTest.001.unity
-    guid: 6bdce89659816455b9f906fc62d19910
-  - enabled: 0
     path: Assets/Scenes/Release Scenes/Android.unity
     guid: cbb717b4073b2d24dadc6202aaa0a4bf
   m_configObjects:
