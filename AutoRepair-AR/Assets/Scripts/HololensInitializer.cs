@@ -23,7 +23,7 @@ public class HololensInitializer : MonoBehaviour
 
     private void InitializeTaskList()
     {
-        GameObject taskGrid = TaskSelector.transform.Find("Container/Grid").gameObject;
+        GameObject taskGrid = TaskSelector.transform.Find("ScrollBox/Container/Grid").gameObject;
         //Instantiate button for each entry in tasklist
         foreach (var task in masterTaskList.tasks)
         {
