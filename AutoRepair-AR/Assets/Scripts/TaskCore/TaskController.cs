@@ -76,16 +76,13 @@ public class TaskController : MonoBehaviour
 
    
     public void OffsetToggle()
-    {                    
-        if (isOffsetApplied)
+    {
+        if (stepCounter > 0)
         {
-            animator.Play("OffsetIn");
-            
-        } else
-        {
-            animator.Play("OffsetOut");
-          
+            animator.Play(isOffsetApplied ? "OffsetIn" : "OffsetOut");
+
+            isOffsetApplied = !isOffsetApplied;
         }
-        isOffsetApplied = !isOffsetApplied;
+        
     }    
 }
