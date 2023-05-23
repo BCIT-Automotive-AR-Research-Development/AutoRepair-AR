@@ -12,18 +12,18 @@ public class HandTracking : MonoBehaviour
 {
 
     [SerializeField]
-    public GameObject TaskWindowPrefab;
+    public GameObject TaskWindowPrefab, TaskWindow;
 
     [SerializeField]
-    public GameObject ToggleSwitch;
+    public GameObject ToggleSwitchPrefab, ToggleSwitch;
 
     MixedRealityPose pose;
 
     // Start is called before the first frame update
     void Start()
     {
-        TaskWindowPrefab = Instantiate(TaskWindowPrefab, this.transform);
-        ToggleSwitch = Instantiate(ToggleSwitch, this.transform);
+        TaskWindow = Instantiate(TaskWindowPrefab, this.transform);
+        ToggleSwitch = Instantiate(ToggleSwitchPrefab, this.transform);
     }
 
     // Update is called once per frame

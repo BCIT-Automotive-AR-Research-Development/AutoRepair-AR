@@ -640,7 +640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1987555380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,14 +648,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1987555379}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1da438a5ff7a4424d981de2c314817d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TaskWindowPrefab: {fileID: 0}
-  ToggleSwitch: {fileID: 1850867357197028, guid: 6a84bc4abee729b4ca65addb8879264c,
+  TaskWindowPrefab: {fileID: 3515418990045158255, guid: b9e25a20ddeee9042a089ba3c7f12dcf,
     type: 3}
+  TaskWindow: {fileID: 0}
+  ToggleSwitchPrefab: {fileID: 1850867357197028, guid: 6a84bc4abee729b4ca65addb8879264c,
+    type: 3}
+  ToggleSwitch: {fileID: 0}
 --- !u!4 &1987555381
 Transform:
   m_ObjectHideFlags: 0
